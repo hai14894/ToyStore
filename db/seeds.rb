@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+for i in 1..20 do
+Toy.create(
+    name: Faker::DcComics.name,
+    description: Faker::DcComics.hero,
+    post_date: Faker::Date.between(from: 10.years.ago, to: Date.today)
+    user: Faker::Music.instrument
+)
+puts "Create toy: #{i}"
+end
